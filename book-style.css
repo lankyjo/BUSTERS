@@ -8,7 +8,34 @@ html, body {
       overflow: hidden;
       background: #0f0f0f;
 }
+.loading-screen{
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      background: white;
+      z-index: 20000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 1.5s;
+    }
+    .loader{
+      max-width: 40vw;
+    }
 
+    .loader-image{
+      animation: loading 800ms infinite ease-in-out alternate;
+    }
+    @keyframes loading {
+      0%{
+        transform: scale(0.8);
+        opacity: .4;
+      }
+      100%{
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
 .image-slider {
       z-index: 0;
       margin: 0 auto;
@@ -126,33 +153,6 @@ button:focus {
 a{
       text-decoration: none;
 }
-.loading-screen{
-      position: fixed;
-      width: 100vw;
-      height: 100vh;
-      background: white;
-      z-index: 2000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: 1.5s;
-    }
-    .loader{
-      max-width: 50vw;
-    }
-    .loader-image{
-      animation: loading 800ms infinite ease-in-out alternate;
-    }
-    @keyframes loading {
-      0%{
-        transform: scale(0.8);
-        opacity: .4;
-      }
-      100%{
-        transform: scale(1);
-        opacity: 1;
-      }
-    }
 .logo{
       position: fixed;
       top: 5%;
@@ -170,6 +170,33 @@ a{
       font-size: 8px;
       letter-spacing: 3px;
 }
+/* Styles for the loader */
+.loading-screen {
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      background: white;
+      z-index: 20000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 1.5s;
+    }
+    
+    .loader {
+      max-width: 40vw; /* Adjust as needed */
+    }
+    
+    /* Add media queries to handle smaller screens */
+    @media (max-width: 768px) { /* Adjust breakpoint as needed */
+      .loader {
+        max-width: 60vw; /* Make loader larger on smaller screens */
+      }
+      .loader-image{
+            width: 30vw;
+      }
+    }
+    
 @media(max-width: 990px) {
       .block-2, .overlay {
             display: none;
