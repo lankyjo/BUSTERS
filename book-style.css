@@ -193,7 +193,7 @@ a{
         max-width: 60vw; /* Make loader larger on smaller screens */
       }
       .loader-image{
-            width: 30vw;
+            width: 40vw;
       }
     }
     
