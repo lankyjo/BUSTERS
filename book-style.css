@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Herr+Von+Muellerhoff&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+html, body {
+      margin: 0%;
+      padding: 0%;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      background: #0f0f0f;
+}
+
+.image-slider {
+      z-index: 0;
+      margin: 0 auto;
+      padding: 0;
+      width: 100%;
+      height: 100vh;
+}
+
+.image-slide {
+      height: 100vh;
+      margin: 0 auto;
+}
+
+.slick-slide.slick-center {
+      transform: scale(1.2);
+      transition: transform .8s 1.4s cubic-bezier(.84, 0, .08, .99);
+}
+
+.slick-slide {
+      transition: transform .7s cubic-bezier(.84, 0, .08, .99);
+}
+
+.slider-control {
+      margin: 0%;
+      position: absolute;
+      z-index: 2;
+      bottom: 8%;
+      left: 15%;
+      transform: translate(-50%, -50%);
+      display: flex;
+}
+ul{
+      margin-top: -3rem;
+      margin-left: 8rem;
+}
+ul li{
+      color: #fff;
+      font-weight: 100;
+      font-size: 18px;
+  font-family: "Poppins", sans-serif;
+}
+
+button {
+      color: #fff;
+      background: none;
+      padding: 24px;
+      border: 1px solid rgba(255, 255, 255, .3);
+      font-size: 16px;
+      border-radius: 50%;
+      margin: .4em;
+      display: inline-block;
+}
+
+button:focus {
+      outline: none;
+}
+
+.block-1 {
+      z-index: 1;
+      position: fixed;
+      height: 100vh;
+      width: 5%;
+      left: 0%;
+      background: #0f0f0f;
+}
+
+.block-2 {
+      z-index: 1;
+      position: fixed;
+      height: 100vh;
+      width: 25%;
+      left: 25%;
+      background: #0f0f0f;
+}
+
+.block-3 {
+      z-index: 1;
+      position: fixed;
+      height: 100vh;
+      width: 5%;
+      right: 0%;
+      background: #0f0f0f;
+}
+
+.overlay {
+      z-index: 1;
+      position: fixed;
+      height: 100vh;
+      width: 20%;
+      left: 5%;
+      background: rgba(0, 0, 0, .65);
+}
+
+.text-slider-wrapper {
+      z-index: 2;
+      position: absolute;
+      width: 100%;
+      top: 45%;
+}
+
+.text-slider {
+      margin: 0%;
+      padding: 0%;
+      height: 100vh;
+}
+
+.text-slide h1 {
+      color: #fff;
+      font-size: 64px;
+      font-family: "Cinzel";
+      font-weight: lighter;
+      text-transform: uppercase;
+      padding-left: 10%;
+}
+a{
+      text-decoration: none;
+}
+.loading-screen{
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      background: white;
+      z-index: 2000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 1.5s;
+    }
+    .loader{
+      max-width: 50vw;
+    }
+    .loader-image{
+      animation: loading 800ms infinite ease-in-out alternate;
+    }
+    @keyframes loading {
+      0%{
+        transform: scale(0.8);
+        opacity: .4;
+      }
+      100%{
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+.logo{
+      position: fixed;
+      top: 5%;
+      left: 2%;
+      z-index: 3000;
+}
+.logo img{
+      width: 100px;
+      filter:  brightness(0) invert(1);
+}
+.logo p{
+      margin-top: -3px;
+      color: #fff;
+      text-align: center;
+      font-size: 8px;
+      letter-spacing: 3px;
+}
+@media(max-width: 990px) {
+      .block-2, .overlay {
+            display: none;
+      }
+      .image-slide{
+            width: 100%;
+      }
+      .block-1 {
+            width: 50%;
+            /* display: none; */
+      }
+
+      .block-3 {
+            width: 12%;
+            /* display: none; */
+      }
+
+      .slide-slick {
+            display: none !important;
+      }
+
+      .text-slide h1 {
+            font-size: 30px !important;
+      }
+      ul{
+            margin-top: -1.2rem;
+            margin-left: 2.3rem;
+      }
+      .text-slider-wrapper {
+            position: absolute;
+            top: 50% !important;
+      }
+
+      .slider-control {
+            left: 22.5%;
+      }
+}
+/*  */
