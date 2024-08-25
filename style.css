@@ -207,7 +207,7 @@ nav {
   height: auto;
   transform: scale(0);
   animation: pop 1.3s forwards ease-in;
-  animation-delay: 1.3s;
+  animation-delay: 2.3s;
 }
 @keyframes pop {
   0%{
@@ -265,7 +265,7 @@ nav {
 .line-left, .line-right{
   max-width: 0%;
   animation: grow 2s forwards;
-  animation-delay: 2s;
+  animation-delay: 3s;
   opacity: 0;
 }
 @keyframes grow {
@@ -287,7 +287,8 @@ nav {
   letter-spacing: 3px;
   margin-right: -3px;
   transform: scale(3);
-  animation: shrink 2s forwards;
+  animation: shrink 1.2s forwards;
+  animation-delay: 1s;
 }
 @keyframes shrink {
   0%{
@@ -321,7 +322,7 @@ nav {
   opacity: 0;
   /* display: none; */
   animation: show 1.4s ease-in forwards;
-  animation-delay: 3.5s;
+  animation-delay: 4.5s;
 }
 @keyframes show {
   0%{
